@@ -8,8 +8,6 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.arno.testarouter.interf.IAppProvider;
-import com.arno.testarouter.service.AppService;
-import com.arno.testarouter.service.AppService2;
 
 @Route(path = IAppProvider.APP_BTN_PATH)
 public class BtnActivity extends AppCompatActivity {
@@ -19,10 +17,12 @@ public class BtnActivity extends AppCompatActivity {
     String string;
     @Autowired
     String string1;
-    @Autowired
-    AppService service1;
-    @Autowired
-    AppService2 service2;
+
+    // 服务注入类型为接口 类型为AppService具体实现类时会注入失败
+    @Autowired(name = IAppProvider.APP_SERVICE_1)
+    IAppProvider service1;
+    @Autowired(name = IAppProvider.APP_SERVICE_2)
+    IAppProvider service2;
 
     //手动获取
     Bundle b;

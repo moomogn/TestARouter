@@ -16,7 +16,7 @@ public class AppService2 implements IAppProvider {
 
     @Override
     public void Toast(Context context, String msg) {
-        L.d("AppService = Toast");
+        L.d("AppService2 = Toast");
         Toast.makeText(context, "[AppService2]:"+msg, Toast.LENGTH_SHORT).show();
     }
 

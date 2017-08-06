@@ -15,12 +15,12 @@ public class AppService implements IAppProvider {
 
     @Override
     public void Toast(Context context, String msg) {
-        L.d("AppService = Toast");
-        Toast.makeText(context, "[AppService]:"+msg, Toast.LENGTH_SHORT).show();
+        L.d("AppService1 = Toast");
+        Toast.makeText(context, "[AppService1]:"+msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void init(Context context) {
-        L.d("AppService - init");
+        L.d("AppService1 - init");
     }
 }
