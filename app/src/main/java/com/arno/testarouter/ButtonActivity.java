@@ -12,6 +12,7 @@ import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.arno.moduel1.IModuleProvider;
 import com.arno.testarouter.interf.IAppProvider;
 import com.arno.testarouter.util.L;
 
@@ -97,11 +98,11 @@ public class ButtonActivity extends AppCompatActivity {
             case R.id.button8://跳转失败
                 ARouter.getInstance().build("/x/x").navigation();
                 break;
-            case R.id.button9://跳转失败
+            case R.id.button9://Service
                 ARouter.getInstance().build(IAppProvider.APP_BTN_PATH).navigation();
                 break;
-            case R.id.button10://跳转失败
-                ARouter.getInstance().build(IAppProvider.APP_BTN_PATH).navigation();
+            case R.id.button10://Module Acti&Service
+                ARouter.getInstance().build(IModuleProvider.MODULE_ACTI_PATH).navigation();
                 break;
         }
     }
